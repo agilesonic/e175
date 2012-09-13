@@ -10,9 +10,9 @@ class HomeController < ApplicationController
       type = v[2]
       val = v[6].to_i
       if @results[type].nil?
-        @result[type] = val
+        @results[type] = val
       else
-        @result[type] += val
+        @results[type] += val
       end
     end
     render "result"
