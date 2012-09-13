@@ -8,6 +8,8 @@ class HomeController < ApplicationController
     file.each do |line|
       v = line.split(',')
       type = v[2]
+      if( type == ' UsageType' )
+        next
       val = v[6].to_i
       if @results[type].nil?
         @results[type] = val
