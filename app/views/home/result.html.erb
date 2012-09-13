@@ -1,2 +1,12 @@
 <h1>Summary of usage</h1>
 
+<p>
+	<table border="0">
+	<% @results.each do |type| %>
+		<tr>
+			<td><%= type %></td>
+			<td align="right"><%= @results["type"]%></td>
+		</tr>
+	<% end %>
+	</table>
+</p>
