@@ -10,6 +10,7 @@ class HomeController < ApplicationController
       type = v[2]
       if( type == ' UsageType' )
         next
+      end
       val = v[6].to_i
       if @results[type].nil?
         @results[type] = val
