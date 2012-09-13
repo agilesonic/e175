@@ -1,8 +1,9 @@
 class HomeController < ApplicationController
   def index
   end
-
-  def result
+  
+  def upload
+    render "result"
   end
 
 end
