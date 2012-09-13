@@ -8,7 +8,7 @@ class HomeController < ApplicationController
     file.each do |line|
       v = line.split(',')
       type = v[2]
-      val = to_i(v[6])
+      val = v[6].to_i
       if @results[type].ni?
         @result[type] = val
       else
