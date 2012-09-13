@@ -9,7 +9,7 @@ class HomeController < ApplicationController
       v = line.split(',')
       type = v[2]
       val = v[6].to_i
-      if @results[type].ni?
+      if @results[type].nil?
         @result[type] = val
       else
         @result[type] += val
