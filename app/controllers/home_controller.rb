@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   end
   
   def upload
-    file = params["file"]
+    file = params["file"].tempfile
     @results = Hash.new
     file.each do |line|
       v = line.split(',')
